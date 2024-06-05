@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather App</title>
+	<link rel="icon" href="icon.png">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-gradient-to-br from-yellow-300 to-sky-400 flex flex-col align-center min-h-screen p-3">
+	<h1 class="text-4xl sm:text-5xl text-center font-bold">Weather App</h1>
+	<p class="text-lg text-center my-3">Enter a city name to get the weather forecast.</p>
+	<form id="weather-form" class="mx-auto flex flex-col items-center sm:flex-row gap-3">
+		<input id="city-input" class="px-3 py-2 border border-gray-300 rounded-md shadow-sm text-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" type="text" spellcheck="false" placeholder="Enter city name">
+		<button type="submit" class="p-2 bg-yellow-400 rounded-md hover:bg-yellow-300 active:bg-yellow-200">Get Weather</button>
+	</form>
+	<div id="weather-container" class="w-80 h-80 p-4 mx-auto hidden flex-col items-center mt-10 bg-slate-200 rounded-lg shadow-lg text-center">
+		<p id="city-display" class="text-3xl sm:text-4xl font-bold">City</p>
+		<p id="temp-display" class="text-2xl sm:text-3xl my-3">83°F</p>
+		<p id="humidity-display" class="text-xl sm:text-2xl">Humidity: <span>79</span>%</p>
+		<p id="desc-display" class="text-2xl sm:text-3xl my-3 italic">Clear Sky</p>
+		<p id="weather-emoji" class="text-6xl sm:text-7xl">⛈️</p>
+	</div>
+	<div id="error-container" class="w-1/5 p-3 mx-auto bg-slate-200 rounded-lg shadow-lg text-center hidden flex-col items-center mt-10">
+		<p class="text-3xl font-bold">City not found!</p>
+		<p class="text-lg">Please enter a valid city name.</p>
+	</div>
+</body>
+
+</html>
